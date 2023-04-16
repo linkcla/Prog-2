@@ -29,7 +29,6 @@ public class Ex3 {
         emmagatzemarPelicules();
         ordenarPeliculesSegonsGen();
 //        imprimirGenere("");
-        
     }
 
     private void emmagatzemarPelicules() {
