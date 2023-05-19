@@ -15,7 +15,7 @@ public class PanelTitulo extends JPanel {
         jlb = new JLabel("TALLER 2 - PROGRAMACIÓN II - CURSO 2022-23");
         jlb.setFont(new Font("ARIAL" , Font.BOLD,20));
         jlb.setOpaque(true);
-        jlb.setForeground(Color.white);
+        jlb.setForeground(Color.lightGray);
         jlb.setBackground(Color.black);
         jlb.setSize(700,100);
         jlb.setHorizontalAlignment(0);
