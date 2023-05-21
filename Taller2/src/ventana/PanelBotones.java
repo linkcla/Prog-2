@@ -1,17 +1,21 @@
+package ventana;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class PanelComponentes extends JPanel {
+public class PanelBotones extends JPanel {
     private JButton [] componentes = new JButton[4];
-    public PanelComponentes(){
+
+    public PanelBotones() {
         setLayout(new GridLayout(1,4));
         inicializarBotones();
-        añadirlisteners();
-        añadirAPanel();
+        addlisteners();
+        addAPanel();
     }
 
-    private void inicializarBotones(){
+    private void inicializarBotones() {
         String [] nombres = {"CREAR", "REPRODUCIR", "ADIVINAR", "SALIR"};
+
         for (int i = 0; i < nombres.length; i++) {
             componentes[i] = new JButton(nombres[i]);
             componentes[i].setBackground(Color.black);
@@ -22,14 +26,14 @@ public class PanelComponentes extends JPanel {
 
     }
 
-    private void añadirlisteners() {
-        componentes[0].addActionListener(e -> System.out.println("klk"));
-        componentes[1].addActionListener(e -> System.out.println("klk"));
+    private void addlisteners() {
+        componentes[0].addActionListener(e -> Ventana.panelContenido.cambiarAJuego());
+        componentes[1].addActionListener(e -> Ventana.panelContenido.cambiarAReproduccion());
         componentes[2].addActionListener(e -> System.out.println("klk"));
         componentes[3].addActionListener(e -> System.exit(0));
     }
 
-    private void añadirAPanel() {
+    private void addAPanel() {
         for (int i = 0; i < componentes.length ; i++) {
             add(componentes[i]);
         }

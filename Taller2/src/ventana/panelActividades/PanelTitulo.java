@@ -1,3 +1,5 @@
+package ventana.panelActividades;
+
 import javax.swing.*;
 import java.awt.*;
 
