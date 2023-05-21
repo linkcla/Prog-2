@@ -2,6 +2,9 @@ package ventana;
 
 import javax.swing.*;
 
+/**
+ * Este es el JFrame que contiene el JPanel principal (PanelContenido.java)
+ */
 public class Ventana extends JFrame {
     public static PanelContenido panelContenido = new PanelContenido();
     public Ventana() {
@@ -14,6 +17,7 @@ public class Ventana extends JFrame {
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setContentPane(panelContenido);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 

@@ -3,14 +3,18 @@ package ventana.dibujo;
 import javax.swing.*;
 import java.awt.*;
 import notas.*;
+import ventana.Ventana;
 
 public class PanelJuego extends JPanel {
     private JButton[] button = new JButton[110];
     private Notas[] notasUsadas = new Notas[110];
     private int indice = 0;
 
+    /**
+     * Esta clase sirve para mostar el panel donde se van ubicando las notas que se tocan.
+     */
     public PanelJuego() {
-        setLayout(new GridLayout(11,10,10,10));
+        setLayout(new GridLayout(10,11,10,10));
         setBackground(Color.black);
 
         inicializarBotonesAColorNegro();
@@ -31,6 +35,11 @@ public class PanelJuego extends JPanel {
     }
 
     public void addNota(Notas nota) {
+        if(indice == 110) {
+            Ventana.panelContenido.cambiarADefault();
+            return;
+        }
+
         notasUsadas[indice] = nota;
 
         button[indice].setBackground(nota.getColor());

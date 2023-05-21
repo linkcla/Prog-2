@@ -6,6 +6,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Esta clase es el panel que contiene la imagen de la UIB
+ */
 public class PanelUIB extends JPanel {
     public PanelUIB() {
         BufferedImage imagenUIB;

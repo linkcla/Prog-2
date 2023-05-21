@@ -3,6 +3,9 @@ package ventana;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * En esta clase encontramos el panlen que contiene los botones CREAR, REPRODUCIR, ADIVINAR y SALIR.
+ */
 public class PanelBotones extends JPanel {
     private JButton [] componentes = new JButton[4];
 
@@ -29,7 +32,7 @@ public class PanelBotones extends JPanel {
     private void addlisteners() {
         componentes[0].addActionListener(e -> Ventana.panelContenido.cambiarAJuego());
         componentes[1].addActionListener(e -> Ventana.panelContenido.cambiarAReproduccion());
-        componentes[2].addActionListener(e -> System.out.println("klk"));
+        componentes[2].addActionListener(e -> Ventana.panelContenido.cambiarAAdivinar());
         componentes[3].addActionListener(e -> System.exit(0));
     }
 
